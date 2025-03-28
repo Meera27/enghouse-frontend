@@ -1,70 +1,98 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Enghouse Interview Application
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This application was developed for the Enghouse interview process. It demonstrates a simple authentication system with role-based content access using React and Spring Boot.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **User Authentication**: Simple username-based login system
+- **Role-based Access**: Different views for different user roles
+- **Questions and Answers System**: 
+  - "enghouse" user can submit answers to predefined questions
+  - "meera99" user can view questions and any submitted answers
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
+- React
+- React Router for navigation
+- CSS for styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+- Spring Boot
+- REST API endpoints
+- MySQL
 
-### `npm run build`
+## User Credentials
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application has two predefined users:
+- Username: `enghouse` - Admin role with ability to answer questions
+- Username: `meera99` - Regular user with ability to view questions and answers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Application Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend Components
+- **App.js**: Main application component with routing and authentication state
+- **NavbarComponent**: Navigation header with conditional rendering based on auth state
+- **LoginComponent**: Simple login form that validates credentials
+- **HomeComponent**: Main content area that displays questions and answers
 
-### `npm run eject`
+### Backend Components
+- **QuestionsController**: REST endpoints for managing questions
+- **QuestionsService**: Business logic for question operations
+- **Questions**: Data model for questions and answers
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
+- Node.js and npm for frontend
+- Java 8+ and Maven for backend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Start the Frontend**
+   ```bash
+   cd enghouse-frontend
+   npm install
+   npm start
+   ```
+   The application will open at http://localhost:3000
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Login with either "enghouse" or "meera99" username
+2. As "enghouse":
+   - View questions
+   - Submit answers to questions
+3. As "meera99":
+   - View questions
+   - Read answers (if available)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Endpoints
 
-### Code Splitting
+- `GET /all`: Retrieve all questions
+- `POST /add`: Submit a new answer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Development Notes
 
-### Analyzing the Bundle Size
+This application was created as part of the Enghouse interview process to demonstrate:
+- React component design and state management
+- Conditional rendering based on user roles
+- Basic API interaction
+- Simple authentication flow
+- Form handling and validation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The focus was on creating a clean, functional UI that clearly demonstrates the required capabilities rather than implementing a production-ready authentication system.
 
-### Making a Progressive Web App
+## Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If this were to be developed further, potential improvements could include:
+- Proper authentication with JWT tokens
+- Password-based user authentication
+- Persistent data storage with a database
+- Enhanced UI with more interactive elements
+- Testing suite for both frontend and backend components
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```This project was created specifically for the Enghouse interview process and serves as a demonstration of React and Spring Boot development capabilities.```
