@@ -40,9 +40,9 @@ function LoginComponent({ onLogin }) {
             Login
           </button>
         </form>
-        <div className="login-help">
+        {/* <div className="login-help">
           <p>Valid usernames: "enghouse" or "meera99"</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -93,14 +93,14 @@ function HomeComponent({ username }) {
                   
                   {username === 'enghouse' && (
                     <div className="answer-field">
-                      <label htmlFor={`answer-${question.id}`}>Your Answer:</label>
+                     {/* <label htmlFor={`answer-${question.id}`}>Your Answer:</label>
                       <textarea
                         id={`answer-${question.id}`}
                         value={answers[question.id] || ''}
                         onChange={(e) => handleAnswerChange(question.id, e.target.value)}
                         placeholder="Type your answer here..."
                         rows={3}
-                      />
+                      /> 
                       <button 
                         onClick={() => handleSubmitAnswer(question.id)}
                         className="submit-button"
@@ -108,6 +108,7 @@ function HomeComponent({ username }) {
                       >
                         Submit Answer
                       </button>
+                      */}
                     </div>
                   )}
                   
