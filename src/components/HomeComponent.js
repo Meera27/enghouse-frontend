@@ -4,7 +4,7 @@ import './Home.css';
 
 function HomeComponent({ username }) {
   const staticQuestions = [
-    { id: 1, questions: "Based on your experience, what critical factors determine whether someone will thrive in this particular role?", answers: "" },
+    { id: 1, questions: "What opportunities are there for professional development and learning?", answers: "" },
     { id: 2, questions: "Could you describe the key attributes and outcomes that, in your experience, characterize a truly successful hire for this position?", answers: "" },
   ];
   
